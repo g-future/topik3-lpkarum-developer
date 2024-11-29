@@ -1,0 +1,105 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "menu main"
+      "menu right"
+      "footer footer";
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  /* Header */
+  .header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Menu */
+  .menu {
+    grid-area: menu;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    color: #4CAF50;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Main Content */
+  .main {
+    grid-area: main;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right Sidebar */
+  .right {
+    grid-area: right;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Footer */
+  .footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      grid-template-areas:
+        "header"
+        "menu"
+        "main"
+        "right"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  
+    .menu, .main, .right {
+      padding: 15px;
+    }
+  }
+  
